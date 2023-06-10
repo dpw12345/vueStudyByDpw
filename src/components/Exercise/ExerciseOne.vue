@@ -18,6 +18,8 @@
             <button @click="toSlot">插槽</button>
         </div>
     </div> 
+    <hr>
+    <bus />
 </div>
 
 </template>
@@ -25,10 +27,12 @@
 <script>
 import ChildOne from './ChildOne.vue'
 import ChildTwo from './ChildTwo.vue'
+import Bus from '../../views/Bus.vue'
 export default {
     components:{
         ChildOne:ChildOne,
         ChildTwo:ChildTwo,
+        Bus,Bus
     },
 data(){
     return {
