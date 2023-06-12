@@ -19,7 +19,7 @@
         </div>
     </div> 
     <hr>
-    <bus />
+    <bus v-if="flag!==3" />
 </div>
 
 </template>

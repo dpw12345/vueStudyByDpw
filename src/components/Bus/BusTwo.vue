@@ -1,12 +1,17 @@
 <template>
-<div>busTwo</div>
+<div>
+    <p>BusTwo</p>
+    <p>{{ title }}</p>
+</div>
 </template>
 
 <script>
 import bus from '../../eventBus/bus'
 export default {
 data(){
-return {}
+return {
+    title:''
+}
 },
 created() {
     this.getBusValue()
@@ -14,7 +19,10 @@ created() {
 methods:{
     getBusValue(){
         bus.$on('bus',(v)=>{
-            console.log(v,'bus-vv');
+            this.title = v
+            setTimeout(()=>{
+                this.title=''
+            },1000)
         })
     }
 }
