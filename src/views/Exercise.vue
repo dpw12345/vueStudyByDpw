@@ -1,23 +1,31 @@
 <template>
   <div>
     <h4>exercise:{{ name }}:{{ gender }}:{{name2}}</h4>
-    <button @click="jump()">jump</button>
+    <button @click="jump()">跳转</button>
     <ul>
       <li>
-        <button @click="fn">click</button>
+        <button @click="fn">点击</button>
       </li>
     </ul>
+    <hr>
+    <sync :title.sync="title" :bottom.sync="bottom"/>
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex';
+import syncVue from '../components/Sync/sync.vue'
 export default {
+  components:{
+    sync:syncVue
+  },
   created() {
     // console.log(this.$route.params,'9');
   },
   data() {
     return {
+      title:'title',
+      bottom:'bottom'
     }
   },
   computed:{
