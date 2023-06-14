@@ -52,7 +52,7 @@ export default {
         if (matchPassword === this.password) {
           console.log("login");
           this.$router.push({
-            name:'exercise',
+            name:'options',
             params:{
               name:123
             }

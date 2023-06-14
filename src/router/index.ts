@@ -11,21 +11,10 @@ const routes: Array<RouteConfig> = [
     component: Login
   },
   {
-    path: '/exercise',
-    name: 'exercise',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Exercise.vue')
+    path: '/options',
+    name: 'options',
+    component: ()=> import('../views/Options.vue')
   },
-  {
-    path:'/exercise/one',
-    component:() => import('../components/Exercise/ExerciseOne.vue')
-  },
-  {
-    path:'/exercise/slot',
-    component:() => import('../views/ExerciseSlot.vue')
-  }
 ]
 
 const router = new VueRouter({
