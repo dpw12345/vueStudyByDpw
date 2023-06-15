@@ -26,6 +26,10 @@ return {
             path:'options/introduction'
         },
         {
+            option:'TodoList',
+            path:'options/todoList'
+        },
+        {
             option:'组件通信',
             path:'options/vueX'
         },

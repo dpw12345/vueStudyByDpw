@@ -21,6 +21,11 @@ const routes: Array<RouteConfig> = [
     component: ()=> import('../views/Text.vue'),
   },
   {
+    path: '/options/todoList',
+    name: 'todoList',
+    component: ()=> import('../views/OptionsToDoList.vue'),
+  },
+  {
     path: '/options/vueX',
     name: 'vueX',
     component: ()=> import('../views/OptionsVueX.vue'),
